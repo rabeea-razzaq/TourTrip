@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="../css/index.css">
+
+    <title>Admin Login</title>
+</head>
+<body>
+    <header>
+        <nav class="z-depth-0">
+            <div class="nav-wrapper  purple darken-4">
+              <a href="#" class="brand-logo center">TourTrip</a>
+              <ul id="nav-mobile" class="right hide-on-small-and-down">
+                <li><a data-target="modal1" class="btn modal-trigger">Add Package</a></li>
+                <li><a id="admin-logout-btn">Logout</a></li>
+              </ul>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <div class="search-form-area">
+              <form class="search-form">
+                  <div class="input-field">
+                    <input id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">Search By Destination</label>
+                  </div>
+                  <!-- <div class="input-field"> -->
+                    <label>Browser Select</label>
+                    <select class="browser-default" id="price-filter">
+                      <option value="" disabled selected>Filter By Price</option>
+                      <option value="15000-20000">15000-20000</option>
+                      <option value="20000-25000">20000-25000</option>
+                      <option value="25000-30000">25000-30000</option>
+                      <option value="30000-35000">30000-35000</option>
+                      <option value="35000-40000">35000-40000</option>
+                      <option value="above 40000">above 40000</option>
+                    </select>
+                  <!-- </div> -->
+                  <button type="submit" class="btn purple darken-4 ">submit</button>
+              </form>
+        </div>
+        <!--package adding Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+            <h4>Add Package</h4>
+            <p class="divider"></p>
+            <form id="add-package" >
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input id="title" type="text" class="validate">
+                    <label for="title">Title</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <input id="Price" type="tel" class="validate">
+                    <label for="Price">Price</label>
+                  </div>
+                  <div class="input-field col s7">
+                    <textarea id="destination" class="materialize-textarea" placeholder="Seperetare Each destination with Commas"></textarea>
+                    <label for="destination">Destination</label>
+                  </div>
+                  <div class="file-field input-field col s5">
+                    <div class="btn">
+                      <span>File</span>
+                      <input id="trip-image" type="file" >
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input  class="file-path validate" type="text" placeholder="Upload one or more files">
+                    </div>
+                  </div>
+                  <div class="input-field col s12">
+                    <textarea id="description" class="materialize-textarea" ></textarea>
+                    <label for="description">Description</label>
+                  </div>
+                  <button type="submit" class="modal-close btn purple darken-4">Agree</button>
+                </div>
+              </form>
+            </div>
+        </div>
+        <!-- Modal Structure -->
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+          <h4>Add Package</h4>
+          <p class="divider"></p>
+          <form id="update-package" >
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="updatetitle" type="text" class="validate">
+                  <!-- <label for="updatetitle">Title</label> -->
+                </div>
+                <div class="input-field col s6">
+                  <input id="updateprice" type="tel" class="validate">
+                  <!-- <label for="updateprice">Price</label> -->
+                </div>
+                <div class="input-field col s7">
+                  <textarea id="updatedestination" class="materialize-textarea" placeholder="Seperetare Each destination with Commas"></textarea>
+                  <!-- <label for="updatedestination">Destination</label> -->
+                </div>
+                <div class="file-field input-field col s5">
+                  <div class="btn">
+                    <span>File</span>
+                    <input id="updateimg" type="file" >
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input  class="file-path validate" type="text" placeholder="Upload one or more files">
+                  </div>
+                </div>
+                <div class="input-field col s12">
+                  <textarea id="updatedescription" class="materialize-textarea" ></textarea>
+                  <!-- <label for="updatedescription">Description</label> -->
+                </div>
+                <input type="hidden" id="hidden-field">
+                <button type="submit" class="modal-close btn purple darken-4">Agree</button>
+              </div>
+            </form>
+          </div>
+      </div>
+        <div class="display-content">
+            <h3 class="center">All The Packages..</h3>
+            <div id ="actual-content" class="row">
+
+            </div>
+            <div class="pagination-div">
+              <ul class="pagination center">
+                <!-- <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                <li class="active"><a href="#!">1</a></li>
+                <li class="waves-effect"><a href="#!">2</a></li>
+                <li class="waves-effect"><a href="#!">3</a></li>
+                <li class="waves-effect"><a href="#!">4</a></li>
+                <li class="waves-effect"><a href="#!">5</a></li>
+                <li class="waves-effect disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li> -->
+              </ul>
+            </div>
+        </div>
+    </div>
+         <script src="../javascript//logout.js"></script>
+         <script src="../javascript/dashboard.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+</body>
+</html>

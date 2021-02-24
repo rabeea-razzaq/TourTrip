@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="../css/index.css">
+    <title>Tour Trip</title>
+</head>
+<body>
+    <div class="navigation_bar">
+        <!--dropdown structure-->
+        <ul id="dropdown1" class="dropdown-content">
+            <li>15000-20000</li>
+            <li>20000-25000</li>
+            <li>25000-30000</li>
+            <li>30000-35000</li>
+            <li>35000-40000</li>
+            <li>above 40000</li>
+        </ul>
+        <nav class="navbar z-depth-0">
+            <div class="nav-wrapper ">
+              <a href="#" class="brand-logo">TourTrip</a>
+              <ul id="nav-mobile" class="right hide-on-small-and-down">
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Filter By Price<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="./signup.html" id="user-signup" class=" white btn black-text">SignUp</a></li>
+                <li><a id="user-login" href="./login.html">Login</a></li>
+                <li><a id="login-btn" class=" white btn black-text">Admin</a></li>
+                <li><a id="purchases" href="./purchaseList.html" class="white-text">Purchases</a></li>
+                <li><a id="logout-btn" class=" white btn black-text">Logout</a></li>
+              </ul>
+            </div>
+          </nav>
+    </div>
+    <div class="body">
+        <div class="main-body" >
+            <div class="content-div" >
+                <div class="textual-div black-text text-darken-5 center" >
+                    <h3 >TOUR TRIP</h3>
+                    <h4>We Make Your Trips Memorable</h4>
+                </div>
+                <div class="form-div">
+                    <form id="searchbar">
+                        <div class="input-field ">
+                            <input placeholder="Search Destinations" id="first_name" type="text" class="validate ">
+                        </div>
+                        <div class="btn-div">
+                            <button type="submit" class="btn purple darken-4">search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>    
+        </div>
+        <!-- purchase -->
+        <div id="purchase-modal" class="modal">
+            <div class="modal-content">
+            <h4>Purchase Package</h4>
+            <p class="divider"></p>
+            <form id="buy-package" >
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input id="name" type="text" class="validate">
+                    <label for="name">Name</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <input id="ctNumber" type="tel" class="validate">
+                    <label for="ctNumber">contac tNumber</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <input id="address" type="text" class="validate">
+                    <label for="address">Address</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <input id="Price" type="text" class="validate">
+                    <label for="Price">Price</label>
+                  </div>
+                  <input type="hidden" id="packageId">
+                  <button type="submit" class="modal-close btn purple darken-4">Confirm</button>
+                </div>
+              </form>
+            </div>
+        </div>
+        <div class="card-display">
+            <h3 id="heading">Searched Results</h3>
+            <div class="row" id="card-content">
+
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+
+
+    <script src="../javascript/index.js"></script>
+     <script>
+         document.addEventListener('DOMContentLoaded',function(){
+            var elems = document.querySelectorAll('.dropdown-trigger');
+           var instances = M.Dropdown.init(elems, {
+               hover:false
+           });
+           var elems = document.querySelectorAll('.modal');
+           var instances = M.Modal.init(elems);
+         })
+     </script>
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     
+</body>
+</html>
+
+<!-- <li><a href="./signup.html" id="user-signup" class=" btn black-text">Sign Up</a></li>
+<li><a id="user-login" >Log In</a></li>
+<li><a id="login-btn" class=" btn black-text">Admin</a></li>
+<li><a id="logout-btn" class=" btn black-text">Logout</a></li> -->

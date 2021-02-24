@@ -1,0 +1,96 @@
+.navbar{
+    background-color: rgb(75, 36, 114);
+}
+.button:hover{
+    background-color: rgb(230, 223, 236);
+}
+
+.main-body{
+    height: 570px;
+    background-image: url('../imgs/pexels-visionpic-net-1007901.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.message{
+    display: flex;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+}
+.content-div{
+    width: 70%;
+}
+#first_name  {
+    background-color: rgb(233, 231, 231);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0px 5px 0px 5px;
+}
+#first_name:focus{
+    border-bottom: 2px solid black;
+}
+.btn-div{
+    display:flex;
+    justify-content: center;
+}
+.card-image{
+    width: 100%;
+    height: 200px;
+}
+.list-icon{
+    list-style-type: disc;
+}
+.login-content{
+    width: 40%;
+    border: 1px solid rgb(204, 201, 201);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow:  10px 10px 8px #888888;
+}
+.whole-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html{
+     height: 100vh;
+}
+.search-form{
+    width: 50%;
+}
+.search-form-area{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px 0px 0px;
+}
+.pagination{
+    cursor: pointer;
+}
+.purchase-container{
+    padding: 20px;
+}
+.textual-display{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+.div1{
+    flex-grow: 2;
+    
+}
+.div2{
+    flex-grow: 1 ;
+    
+}
+.bold{
+    font-weight: bolder;
+}
+.card-style{
+    background-color: rgb(75, 36, 114);   
+}
